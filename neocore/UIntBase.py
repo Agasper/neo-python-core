@@ -107,3 +107,6 @@ class UIntBase(SerializableMixin):
 
     def __ge__(self, other):
         return self.CompareTo(other) >= 0
+
+    def __len__(self):
+        return len(self.Data)

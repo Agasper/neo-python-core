@@ -315,6 +315,7 @@ class UIntBaseTestCase(TestCase):
     def test_size(self):
         u1 = UIntBase(3, bytearray(b'abc'))
         self.assertEqual(u1.Size, 3)
+        self.assertEqual(len(u1), 3)
 
     def test_serialize(self):
         data = b'abc'
