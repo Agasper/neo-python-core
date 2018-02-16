@@ -444,6 +444,7 @@ class UInt160TestCase(TestCase):
 
         u1 = UInt160(b'12345678901234567890')
         self.assertEqual(hash(u1), 875770417)
+        self.assertEqual(len(u1), 20)
 
     def test_initialization_invalid_length(self):
         with self.assertRaises(Exception):
@@ -472,6 +473,7 @@ class UInt256TestCase(TestCase):
 
         u1 = UInt256(b'12345678901234567890123456789012')
         self.assertEqual(hash(u1), 875770417)
+        self.assertEqual(len(u1), 32)
 
     def test_initialization_invalid(self):
         with self.assertRaises(Exception):
